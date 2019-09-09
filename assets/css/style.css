@@ -1,9 +1,9 @@
 body {
-    background-color: grey;
+    background-color: orange;
 }
 
 .choice {
-    border: 1px solid lightgray;
+    border: 1px solid orangered;
     padding: 10px;
     border-radius: 4px;
     cursor: pointer;
