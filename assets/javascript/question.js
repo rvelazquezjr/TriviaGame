@@ -23,3 +23,7 @@ const quizQuestions = [
         correctAnswer: 'Winter'
     }
 ];
+
+const funImages = [
+    
+]
