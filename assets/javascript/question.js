@@ -24,6 +24,4 @@ const quizQuestions = [
     }
 ];
 
-const funImages = [
-    
-]
+
