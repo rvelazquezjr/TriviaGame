@@ -4,8 +4,7 @@ counter = 30;
     let lost = 0;
     let timer;
 
-
-
+    
 function nextQuestion() {
     const isQuestionOver = (quizQuestions.length - 1) === currentQuestion;
     if (isQuestionOver) {
@@ -40,7 +39,7 @@ function countDown() {
 }
 
 function loadQuestion() {
-    counter = 10;
+    counter = 30;
     timer = setInterval(countDown, 1000);
 
     const question = quizQuestions[currentQuestion].question;
@@ -77,7 +76,7 @@ $(document).on('click', '.choice', function () {
     
       else {
         lost++;
-        console.log("Lewhewzaher!!!");
+        console.log("Loser!!!");
         nextQuestion();
 
         
@@ -87,9 +86,9 @@ $(document).on('click', '.choice', function () {
 
 function displayResult() {
     const result = `
-        <p>You got ${score} question(s) RIGHT!!!</p>
-        <p>You got ${lost} question(s) WRONG!!!</p>
-        <p>Total questions right: ${quizQuestions.length} question(s)</p>
+        <p>You got ${score} question(s) <b>RIGHT!!!</b></p>
+        <p>You got ${lost} question(s) <b>WRONG!!!</b></p>
+        <p>Total questions answered: ${quizQuestions.length} question(s)</p>
         <button class="btn btn-primary" id="reset">Reset Game</button>
     `;
 
@@ -117,22 +116,13 @@ function loadRemainingQuestion() {
 
 }
 
-function preLoadImage() {
-    const correctAnswer = quizQuestions[currentQuestion].correctAnswer;
 
-    if (status === 'win') {
-        $('#game'),html(`
-            <p class="preload-image">Congrtulations, you picked the correct answer</p>
-            <p class="preload-image">You lost, too bad</p>
-        `);
-    } else {
-        $('#game').html(`
-            <p class="preload-image">The correct answer was ${correctAnswer}</p>
-        `);
-    }
-}
 
-loadQuestion();
+$('#start').click(function() {
+    $('#start').remove();
+    $('#time').html(counter);
+    loadQuestion();
+})
 
 
 
