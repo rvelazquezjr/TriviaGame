@@ -3,9 +3,16 @@ body {
 }
 
 .choice {
+<<<<<<< HEAD
     border: 5px solid black;
+=======
+    border: 1px solid orangered;
+>>>>>>> 189381d6156facc94d9fd9242df3fe6ef2ba994a
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 189381d6156facc94d9fd9242df3fe6ef2ba994a
